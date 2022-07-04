@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: webpage
+  namespace: flux-system
+spec:
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg
+  interval: 5m0s
+  path: ./clusters/eksctl-lab-smesenAP/workloads/webpage/overlays/production
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system

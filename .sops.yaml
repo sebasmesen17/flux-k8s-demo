@@ -1,0 +1,9 @@
+creation_rules:
+  - path_regex: .*.yaml
+    encrypted_regex: ^(data|stringData)$
+    key_groups:
+      - kms:
+          - arn: "arn:aws:kms:us-east-1:744193803837:key/d21c22cf-817b-4964-93de-9f2dfb6a50f7"
+            aws_profile: admin
+        pgp:
+        - "7BE43D6A5AA634F2AF32F1CB94034339CE65639C"
