@@ -1,0 +1,61 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: monitoring
+rules:
+  - apiGroups:
+      [
+        "",
+        "apps",
+        "autoscaling",
+        "batch",
+        "certificates.k8s.io",
+        "extensions",
+        "networking.k8s.io",
+        "storage.k8s.io",
+        "policy",
+      ]
+    resources:
+      [
+        "pods",
+        "configmaps",
+        "endpoints",
+        "services",
+        "events",
+        "namespaces",
+        "nodes",
+        "limitranges",
+        "persistentvolumes",
+        "persistenttvolumeclaims",
+        "resourcequotas",
+        "secrets",
+        "serviceaccounts",
+        "deployment",
+        "daemonsets",
+        "replicasets",
+        "statefulsets",
+        "horizontalpodautoscalers",
+        "cronjobs",
+        "jobs",
+        "certificatesigningrequests",
+        "ingresses",
+        "ingressclasses",
+        "networkpolicies",
+        "poddisruptionbudgets",
+        "podsecuritypolicies",
+        "storageclasses",
+      ]
+    verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: monitoring
+subjects:
+  - kind: Group
+    name: monitoring
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: monitoring
+  apiGroup: rbac.authorization.k8s.io
