@@ -4,8 +4,8 @@
     - smesen.vendoamigos.com
     - websocket.smesen.vendoamigos.com
     - api.smesen.vendoamigos.com
-    - kiali.vendoamigos.com
-    - grafana.vendoamigos.com
-    - prometheus.vendoamigos.com
-    - alertmanager.vendoamigos.com
-    - jaeger.vendoamigos.com
+    - kiali.smesen.vendoamigos.com
+    - grafana.smesen.vendoamigos.com
+    - prometheus.smesen.vendoamigos.com
+    - alertmanager.smesen.vendoamigos.com
+    - jaeger.smesen.vendoamigos.com
