@@ -1,0 +1,11 @@
+- op: add
+  path: /spec/servers/0/host
+  value: 
+    - smesen.vendoamigos.com
+    - websocket.smesen.vendoamigos.com
+    - api.smesen.vendoamigos.com
+    - kiali.vendoamigos.com
+    - grafana.vendoamigos.com
+    - prometheus.vendoamigos.com
+    - alertmanager.vendoamigos.com
+    - jaeger.vendoamigos.com
