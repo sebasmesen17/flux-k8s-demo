@@ -15,6 +15,7 @@ commonAnnotations:
 resources:
   - ns.yaml
   - ../../base
+  - gateway.yaml
 
 # https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patchesstrategicmerge/
 patchesStrategicMerge:
